@@ -11,7 +11,7 @@ const Index = () => {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <TrendingUp className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-lg text-foreground">Memsu Forex</span>
+            <span className="font-bold text-lg text-foreground">TIEGAM M.</span>
           </div>
           <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
             Get Started
