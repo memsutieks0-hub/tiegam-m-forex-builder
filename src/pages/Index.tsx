@@ -1,7 +1,9 @@
-import React from 'react';
-import { ArrowRight, TrendingUp, Target, Zap, BarChart3, Users, CheckCircle2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, TrendingUp, Target, Zap, BarChart3, Users, CheckCircle2, Play, X } from 'lucide-react';
 
 const Index = () => {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
@@ -40,14 +42,22 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border border-border">
-                <div className="bg-gradient-to-br from-primary to-accent/80 rounded-lg p-6 text-primary-foreground">
-                  <BarChart3 className="w-16 h-16 mb-4 opacity-80" />
-                  <p className="text-sm font-semibold">Real Trading Results</p>
-                  <p className="text-3xl font-bold mt-2">+245%</p>
-                  <p className="text-sm mt-2 opacity-90">Average return within 6 months</p>
+              <button
+                onClick={() => setVideoOpen(true)}
+                className="relative w-full group cursor-pointer"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop"
+                  alt="Trading demo"
+                  className="w-full h-96 object-cover rounded-2xl"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 rounded-2xl transition-colors flex items-center justify-center">
+                  <div className="bg-primary text-primary-foreground p-4 rounded-full group-hover:scale-110 transition-transform">
+                    <Play className="w-8 h-8 fill-current" />
+                  </div>
                 </div>
-              </div>
+              </button>
+              <p className="text-center text-sm text-muted-foreground mt-3">Click to watch trading demo</p>
             </div>
           </div>
         </div>
