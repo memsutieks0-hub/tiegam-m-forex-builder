@@ -326,7 +326,7 @@ const Index = () => {
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <TrendingUp className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <span className="font-bold text-foreground">Memsu Forex</span>
+                <span className="font-bold text-foreground">Tiegam Forex</span>
               </div>
               <p className="text-sm text-muted-foreground">Transforming traders, one strategy at a time.</p>
             </div>
