@@ -165,7 +165,7 @@ const Index = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">How Memsu Forex Works</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">How Tiegam Forex Works</h2>
             <p className="text-xl text-muted-foreground">Your step-by-step path to trading success</p>
           </div>
 
