@@ -211,6 +211,179 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Learning Hub Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Start Learning Today</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Access real trading videos and expert education to master forex from day one
+            </p>
+          </div>
+
+          {/* Featured Trading Video */}
+          <div className="mb-16">
+            <div className="relative rounded-2xl overflow-hidden border border-border">
+              <button
+                onClick={() => setVideoOpen(true)}
+                className="relative w-full group cursor-pointer"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1642104704074-dfa336787620?w=1200&h=600&fit=crop"
+                  alt="Live trading session"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+                  <div className="bg-primary text-primary-foreground p-5 rounded-full group-hover:scale-110 transition-transform">
+                    <Play className="w-10 h-10 fill-current" />
+                  </div>
+                </div>
+              </button>
+              <div className="absolute top-4 left-4 bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                LIVE TRADING
+              </div>
+            </div>
+            <div className="mt-4">
+              <h3 className="text-2xl font-bold text-foreground mb-2">Live Trading Session: EUR/USD Strategy</h3>
+              <p className="text-muted-foreground mb-4">Watch an expert trader execute a real trade with live market data, commentary, and risk management in action.</p>
+              <button
+                onClick={() => setVideoOpen(true)}
+                className="bg-primary text-primary-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center gap-2"
+              >
+                <Play className="w-4 h-4 fill-current" /> Watch Full Video
+              </button>
+            </div>
+          </div>
+
+          {/* Video Courses Grid */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-foreground mb-8">Video Courses</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Forex Fundamentals",
+                  description: "Understand currency pairs, pips, leverage, and how forex markets work",
+                  duration: "2.5 hours",
+                  image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=300&fit=crop",
+                  lessons: 8
+                },
+                {
+                  title: "Technical Analysis Mastery",
+                  description: "Master candlesticks, support/resistance, trends, and chart patterns",
+                  duration: "4 hours",
+                  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+                  lessons: 12
+                },
+                {
+                  title: "Risk Management Pro",
+                  description: "Learn position sizing, stop losses, and capital preservation techniques",
+                  duration: "1.5 hours",
+                  image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
+                  lessons: 6
+                },
+                {
+                  title: "Trading Psychology",
+                  description: "Master emotions, discipline, and the mindset of profitable traders",
+                  duration: "2 hours",
+                  image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+                  lessons: 7
+                },
+                {
+                  title: "Swing Trading Strategies",
+                  description: "Capture multi-day price movements with proven swing trading systems",
+                  duration: "3 hours",
+                  image: "https://images.unsplash.com/photo-1512941691920-25bda36dc643?w=400&h=300&fit=crop",
+                  lessons: 10
+                },
+                {
+                  title: "Day Trading Tactics",
+                  description: "Execute quick trades for daily profits using scalping and day trading setups",
+                  duration: "3.5 hours",
+                  image: "https://images.unsplash.com/photo-1559163853-71f12cb41c18?w=400&h=300&fit=crop",
+                  lessons: 9
+                }
+              ].map((course, i) => (
+                <div key={i} className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-shadow group cursor-pointer">
+                  <div className="relative overflow-hidden h-40">
+                    <img
+                      src={course.image}
+                      alt={course.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                      <Play className="w-8 h-8 text-primary fill-primary" />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h4 className="font-semibold text-foreground mb-2">{course.title}</h4>
+                    <p className="text-sm text-muted-foreground mb-4">{course.description}</p>
+                    <div className="flex items-center justify-between text-xs text-muted-foreground">
+                      <span>📹 {course.lessons} lessons</span>
+                      <span>⏱️ {course.duration}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Trading Education Topics */}
+          <div className="bg-gradient-to-br from-primary/10 to-accent/10 border border-border rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-foreground mb-6">What You'll Learn</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: "📊",
+                  title: "Technical Analysis",
+                  topics: ["Candlestick patterns", "Support & Resistance", "Trend lines", "Moving averages"]
+                },
+                {
+                  icon: "💹",
+                  title: "Trading Strategies",
+                  topics: ["Breakout trading", "Trend following", "Mean reversion", "Scalping"]
+                },
+                {
+                  icon: "🛡️",
+                  title: "Risk Management",
+                  topics: ["Position sizing", "Stop loss placement", "Risk-reward ratios", "Portfolio management"]
+                },
+                {
+                  icon: "🧠",
+                  title: "Trading Psychology",
+                  topics: ["Emotion control", "Discipline", "Patience", "Confidence building"]
+                },
+                {
+                  icon: "💰",
+                  title: "Money Management",
+                  topics: ["Capital preservation", "Profit taking", "Loss cutting", "Account growth"]
+                },
+                {
+                  icon: "🌍",
+                  title: "Market Analysis",
+                  topics: ["Economic indicators", "News trading", "Correlations", "Market structure"]
+                }
+              ].map((section, i) => (
+                <div key={i} className="bg-card rounded-lg p-6">
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl">{section.icon}</span>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-3">{section.title}</h4>
+                      <ul className="space-y-2">
+                        {section.topics.map((topic, j) => (
+                          <li key={j} className="text-sm text-muted-foreground flex items-center gap-2">
+                            <span className="text-accent">✓</span> {topic}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Outcomes Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -360,6 +533,43 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Video Modal */}
+      {videoOpen && (
+        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
+          <div className="bg-black rounded-2xl overflow-hidden max-w-4xl w-full">
+            <div className="flex items-center justify-between p-4 border-b border-border">
+              <h3 className="text-lg font-semibold text-foreground">Live Trading Session</h3>
+              <button
+                onClick={() => setVideoOpen(false)}
+                className="p-2 hover:bg-secondary rounded-lg transition-colors"
+              >
+                <X className="w-6 h-6 text-foreground" />
+              </button>
+            </div>
+            <div className="relative bg-black aspect-video">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                title="Live Trading Session"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="p-6 bg-card border-t border-border">
+              <h4 className="font-semibold text-foreground mb-2">EUR/USD Breakout Strategy</h4>
+              <p className="text-muted-foreground text-sm mb-4">
+                In this live trading session, you'll see how professional traders execute the EUR/USD breakout strategy with proper risk management, real-time analysis, and entry/exit signals.
+              </p>
+              <div className="flex gap-4 text-sm">
+                <span className="text-accent">✓ Live market data</span>
+                <span className="text-accent">✓ Real trading execution</span>
+                <span className="text-accent">✓ Risk management in action</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
